@@ -1,5 +1,5 @@
 <?php
-include 'header.php'
+include 'header.php';
     ?>
 
 <span id="sidebar">
@@ -125,5 +125,5 @@ include 'header.php'
 </main>
 
 <?php
-include 'footer.php'
+include 'footer.php';
 ?>

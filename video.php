@@ -1,5 +1,5 @@
 <?php
-include 'header.php'
+include 'header.php';
 ?>
 <div id="sidebar">
     <nav>
@@ -27,5 +27,5 @@ include 'header.php'
 </main>
 
 <?php
-include 'footer.php'
+include 'footer.php';
 ?>
