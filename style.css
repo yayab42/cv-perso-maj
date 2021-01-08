@@ -1,0 +1,387 @@
+body {
+  max-width: 100%;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: inherit;
+  max-width: 100%;
+  background-color: rgb(48, 48, 48);
+  position: sticky;
+  top: 0;
+  border-radius: 10px;
+}
+
+.alone{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-size: 200%;
+}
+header>div>a {
+  font-family: fantasy;
+  color: blanchedalmond;
+  text-decoration: none;
+  text-shadow: 10px 7px 7px black;
+}
+
+.end_avatar_karl{
+  display: flex;
+  justify-content: flex-end;
+}
+#avatar_karl{
+  border-radius: 50%;
+}
+
+main {
+    background-color: rgb(236, 247, 215);
+    border-radius: 10px;
+    
+}
+
+
+
+
+.presentation{
+
+box-shadow: 10px 10px 10px black ;
+border-radius: 10px;
+
+}
+
+
+
+.presentation h1 {
+  font-size: 300%;
+  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(17, 182, 12);
+  text-align: center;
+  text-shadow: black 10px 10px 10px;  
+}
+
+
+
+.les_etudiants {
+  display: flex;
+  flex-direction: row;
+  color: rgb(17, 182, 2);
+  text-shadow: 10px 7px 7px black;
+  font-weight: bold;
+  font-family: fantasy;
+  font-size: 300%;
+  
+  
+}
+
+.les_etudiants img {
+  box-shadow: 10px 10px 10px black;
+}
+
+
+
+
+
+.boxmain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  max-width: 100%;
+}
+
+.boxmain img {
+  border-radius: 100%;
+}
+
+#ppy {
+  box-shadow: 10px 7px 7px black;
+  display: flex;
+  justify-content: center;
+}
+
+#ppt {
+  box-shadow: 10px 10px 10px black;
+  display: flex;
+  justify-content: center;
+}
+
+#ppk {
+  box-shadow: 10px 10px 10px black;
+  display: flex;
+  justify-content: center;
+}
+
+#ppy:hover {
+  animation-duration: 0.8s;
+  animation-name: prout;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+
+@keyframes prout {
+  0% {
+    transform: translateY(-0px);
+  }
+  30% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+#ppt:hover {
+  animation-duration: 0.8s;
+  animation-name: rebond;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes rebond {
+  0% {
+    transform: translateY(-0px);
+  }
+  30% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+#ppk:hover {
+  animation-duration: 0.8s;
+  animation-name: prout;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes prout {
+  0% {
+    transform: translateY(-0px);
+  }
+  30% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+#ou {
+  text-align: center;
+  color: rgb(17, 182, 2);
+  text-decoration: none;
+  font-family: fantasy;
+  text-shadow: 10px 7px 7px black;
+  font-size: 300%;
+}
+
+#map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  padding: 0 0 1% 0; 
+}
+
+.responsive {
+  width: 100vw;
+  box-shadow: 5px 4px 4px 7px black;
+}
+
+footer {
+  background-color: rgb(48, 48, 48);
+  color: whitesmoke; 
+}
+
+#goteam {
+  display: flex;
+  justify-content: center;
+  font-size: 600%;
+  color: rgb(17, 182, 2);
+  text-shadow: 10px 7px 7px black;
+  font-weight: bold;
+  font-family: fantasy;
+  text-decoration: none;
+}
+
+#entrer {
+    font-size: 90%;
+    font-family: fantasy;
+    background-color: rgb(17, 182, 2);
+    color: blanchedalmond;
+    border-radius: 10px;   
+}
+
+#maindiv {
+display: flex;
+justify-content: center;
+text-align: center;
+padding: 5% 0 100% 0;
+}
+
+
+/*----------------style merge-------------------*/
+
+
+header {
+  background-color: rgb(66, 66, 66);
+  color: palegoldenrod;
+  border-radius: 10px;
+ 
+}
+
+
+#f1 {
+  font-family: fantasy;
+  font-size: 50px;
+}
+
+header h1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-style: italic;
+}
+
+header h2 {
+  display: flex;
+  font-family: fantasy;
+  justify-content: center;
+  font-style: italic;
+  align-items: center;
+  height: 2vh;
+}
+
+
+main h1{
+  display: flex;
+  font-family: fantasy;
+  
+}
+#f2 {
+  font-size: 40px;
+}
+
+#entete {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+
+.avatar{
+  display: flex;
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+}
+
+#navmain {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgb(17, 182, 2);
+}
+
+#navmain a {
+  color: blanchedalmond;
+  text-decoration: none;
+}
+
+.boutonsnav {
+  height: 4vh;
+  width: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+}
+
+.boutonsnav:hover {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+  height: 4vh;
+  width: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+}
+
+.boutonsnav:not(active) {
+  background-color: rgb(17, 182, 2);
+}
+
+
+#Présentation {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  
+}
+
+
+#Experiences {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.tableau table th,
+table td {
+  table-layout: auto;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: rgb(151, 250, 69);
+  border: solid 2px black;
+
+  
+}
+
+#Compétences {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+#Hobbies {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+ 
+}
+
+#Description {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+  height: 50vh;
+  margin: auto;
+}
+
+
+#desc{
+  font-size: 150%;
+  
+}
+
+
+.comment {
+  font-size: 150%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
