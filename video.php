@@ -1,16 +1,13 @@
 <?php
-include 'header.php';
+$metaTitle ='Vidéo présentation campus numérique';
+require 'header.php';
 ?>
 <div id="sidebar">
     <nav>
         <a href="#Vidéo">Vidéo Candidature</a>
     </nav>
 </div>
-
-
 <main>
-
-
     <Section id="videocampus">
         <h2>Vidéo pitch pour Campus Numérique In The Alps</h2>
 
@@ -19,13 +16,7 @@ include 'header.php';
                 allowfullscreen></iframe>
 
     </Section>
-
-
-
-
-
 </main>
-
 <?php
-include 'footer.php';
+require 'footer.php';
 ?>
