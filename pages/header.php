@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+<head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title><?= $metaTitle ?></title>
-<link rel="stylesheet" href="./style.css"/>
-
+<link rel="stylesheet" href="/pages/style.css"/>
+</head>
 <body>
 <header>
     <div id="entete">
         <h1 id="f1">CV BOUNIA Yannis Etudiant Technicien Développeur</h1>
 
         <img
-                src="./IMG_4728.JPG"
+                src="/pages/IMG_4728.JPG"
                 alt="photo"
                 id="photo"
                 class="avatar"
