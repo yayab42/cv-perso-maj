@@ -32,6 +32,3 @@ $metaTitle ="Hobby CV";
                     allowfullscreen></iframe>
         </div>
     </main>
-<?php
-require 'footer.php';
-?>

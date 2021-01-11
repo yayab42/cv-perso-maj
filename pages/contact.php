@@ -57,6 +57,3 @@ $metaTitle ="Page contact CV";
 
         </form>
     </main>
-<?php
-require 'footer.php';
-?>

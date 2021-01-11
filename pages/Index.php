@@ -126,6 +126,3 @@ $metaTitle ='index CV';
             </ol>
         </section>
     </main>
-<?php
-require 'footer.php';
-?>

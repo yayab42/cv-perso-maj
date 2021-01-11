@@ -19,6 +19,3 @@ $metaTitle ="Vidéo présentation campus numérique";
 
     </Section>
 </main>
-<?php
-require 'footer.php';
-?>
