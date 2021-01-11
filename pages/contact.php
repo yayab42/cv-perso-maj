@@ -1,5 +1,5 @@
 <?php
-$metaTitle ='Page contact CV';
+$metaTitle ="Page contact CV";
 require 'header.php';
 ?>
     <main>

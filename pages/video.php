@@ -1,5 +1,5 @@
 <?php
-$metaTitle ='Vidéo présentation campus numérique';
+$metaTitle ="Vidéo présentation campus numérique";
 require 'header.php';
 ?>
 <div id="sidebar">

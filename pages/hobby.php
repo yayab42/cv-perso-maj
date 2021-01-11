@@ -1,5 +1,5 @@
 <?php
-$metaTitle ='Hobby CV';
+$metaTitle ="Hobby CV";
 require 'header.php';
 ?>
     <main>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -26,8 +27,8 @@
 
     <div class="boutonnav" id="navmain">
         <a class="active" href="./index.php">CV</a>
-        <a class="boutonsnav" href="./Hobby.php">Hobby</a>
+        <a class="boutonsnav" href="./hobby.php">Hobby</a>
         <a class="boutonsnav" href="./video.php">Vidéo</a>
-        <a class="boutonsnav" href="./Contact.php">Contact</a>
+        <a class="boutonsnav" href="./contact.php">Contact</a>
     </div>
 </header>
