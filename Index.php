@@ -11,6 +11,8 @@ if (isset($_GET['page'])) {
         require './pages/hobby.php';
     } elseif ($page == 'contact') {
         require './pages/contact.php';
+    } else {
+        require './pages/404.php';
     }
 
 } else {
