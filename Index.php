@@ -1,5 +1,7 @@
 <?php
 require './pages/header.php';
+$_GET['page']=filter_input(INPUT_GET, 'page', FILTER_SANITIZE_URL ) ;
+
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 
