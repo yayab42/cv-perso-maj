@@ -26,7 +26,7 @@
     </div>
 
     <div class="boutonnav" id="navmain">
-        <a class="active" href="./index.php">CV</a>
+        <a class="active", href="./index.php">CV</a>
         <a class="boutonsnav" href="./hobby.php">Hobby</a>
         <a class="boutonsnav" href="./video.php">Vidéo</a>
         <a class="boutonsnav" href="./contact.php">Contact</a>

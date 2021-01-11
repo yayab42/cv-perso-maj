@@ -1,4 +1,7 @@
 <?php
+$page='contact';
+?>
+<?php
 $metaTitle ="Page contact CV";
 require 'header.php';
 ?>

@@ -1,4 +1,7 @@
 <?php
+$page='video';
+?>
+<?php
 $metaTitle ="Vidéo présentation campus numérique";
 require 'header.php';
 ?>

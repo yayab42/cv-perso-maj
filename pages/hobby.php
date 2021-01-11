@@ -1,4 +1,7 @@
 <?php
+$page='hobby';
+?>
+<?php
 $metaTitle ="Hobby CV";
 require 'header.php';
 ?>

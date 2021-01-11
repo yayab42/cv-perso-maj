@@ -1,5 +1,8 @@
 <?php
-$metaTitle ="index CV";
+$page="index";
+?>
+<?php
+$metaTitle ='index CV';
 require 'header.php';
 ?>
     <span id="sidebar">
