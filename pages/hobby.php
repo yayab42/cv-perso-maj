@@ -3,7 +3,6 @@ $page='hobby';
 ?>
 <?php
 $metaTitle ="Hobby CV";
-require 'header.php';
 ?>
     <main>
         <div id="sidebar">

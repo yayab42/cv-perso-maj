@@ -26,9 +26,9 @@
     </div>
 
     <div class="boutonnav" id="navmain">
-        <a class="active", href="./index.php">CV</a>
-        <a class="boutonsnav" href="./hobby.php">Hobby</a>
-        <a class="boutonsnav" href="./video.php">Vidéo</a>
-        <a class="boutonsnav" href="./contact.php">Contact</a>
+        <a class="active", href="./index.php?page=index">CV</a>
+        <a class="boutonsnav" href="./index.php?page=hobby">Hobby</a>
+        <a class="boutonsnav" href="./index.php?page=video">Vidéo</a>
+        <a class="boutonsnav" href=" ./index.php?page=contact">Contact</a>
     </div>
 </header>

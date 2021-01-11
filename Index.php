@@ -1,5 +1,7 @@
 <?php
+include './pages/header.php';
 if (isset($_GET['page'])) {
+$page=$_GET['page'];
 
     if ($page == 'index') {
         require './pages/index.php';
