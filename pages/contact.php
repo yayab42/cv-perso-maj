@@ -1,5 +1,6 @@
 <?php
 $page = 'contact';
+$nomclassboolean=false;
 $metaTitle = "Page contact CV";
 
 $dateactuelle = date('Y-m-d-H-i-s');

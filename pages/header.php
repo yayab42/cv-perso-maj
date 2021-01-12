@@ -1,3 +1,11 @@
+<?php
+if ($nomclassboolean=false){
+    $nomclass="active";
+}
+else if ($nomclassboolean=true){
+    $nomclass="boutonsnav";
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,6 +16,7 @@
 </head>
 <body>
 <header>
+
     <div id="entete">
         <h1 id="f1">CV BOUNIA Yannis Etudiant Technicien Développeur</h1>
 
@@ -27,9 +36,9 @@
     </div>
 
     <div class="boutonnav" id="navmain">
-        <a class="active", href="./index.php?page=index">CV</a>
-        <a class="boutonsnav" href="./index.php?page=hobby">Hobby</a>
-        <a class="boutonsnav" href="./index.php?page=video">Vidéo</a>
-        <a class="boutonsnav" href=" ./index.php?page=contact">Contact</a>
+        <a class="<?php echo $nomclass ?>" href="./index.php?page=index">CV</a>
+        <a class="<?php echo $nomclass ?>" href="./index.php?page=hobby">Hobby</a>
+        <a class="<?php echo $nomclass ?>" href="./index.php?page=video">Vidéo</a>
+        <a class="<?php echo $nomclass ?>" href="./index.php?page=contact">Contact</a>
     </div>
 </header>

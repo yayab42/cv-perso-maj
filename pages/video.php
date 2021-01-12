@@ -1,7 +1,7 @@
 <?php
 $page='video';
-?>
-<?php
+$nomclassboolean=false;
+
 $metaTitle ="Vidéo présentation campus numérique";
 ?>
 <div id="sidebar">
