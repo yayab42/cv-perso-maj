@@ -1,36 +1,27 @@
 <?php
 $page='contact';
-?>
-<?php
 $metaTitle ="Page contact CV";
-?>
 
 
-<?php
-$_POST['Raison']= filter_input(INPUT_POST, 'Raison', $filter=FILTER_DEFAULT);
-
-$_POST['civilite']=filter_input(INPUT_POST, 'civilite', $filter=FILTER_DEFAULT);
-
-$_POST['Nom']=filter_input(INPUT_POST, 'Nom', $filter=FILTER_DEFAULT);
-
-$_POST['Prenom']=filter_input(INPUT_POST, 'Prenom', $filter=FILTER_DEFAULT);
-
-$_POST['mail']=filter_input(INPUT_POST, 'mail',  $filter=FILTER_DEFAULT);
-
-$_POST['Message']=filter_input(INPUT_POST, 'Message', $filter=FILTER_DEFAULT);
-file_put_contents($contact_Y-m-d-H-i-s.txt, $P_POST['Raison'], $flags=0);
-file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['civilite'], $flags=0);
-file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['Nom'], $flags=0);
-file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['Prenom'], $flags=0,);
-file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['mail'],  $flags=0,);
-file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['Message'], $flags=0,);
+$raison=filter_input(INPUT_POST, 'Raison');
+$civilite=filter_input(INPUT_POST, 'civilite');
+$Nom=filter_input(INPUT_POST, 'Nom');
+$Prenom=filter_input(INPUT_POST, 'Prenom');
+$mail=filter_input(INPUT_POST, 'mail');
+$Message=filter_input(INPUT_POST, 'Message');
+file_put_contents('contact_Y-m-d-H-i-s.txt', $raison);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $civilite);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $Nom);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $Prenom);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $mail);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $Message);
 ?>
 
     <main>
 
         <h2>Contact</h2>
 
-        <form id="formulaire" action="index.php?page=contact/post" method="POST">
+        <form id="formulaire" action="index.php?page=contact" method="POST">
 
             <section>
                 <p class="comment">Veuilllez préciser la raison de votre contact</p>
