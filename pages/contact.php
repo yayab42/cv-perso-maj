@@ -2,19 +2,22 @@
 $page='contact';
 $metaTitle ="Page contact CV";
 
-
+$dateactuelle=date('Y-m-d-H-i-s');
 $raison=filter_input(INPUT_POST, 'Raison');
 $civilite=filter_input(INPUT_POST, 'civilite');
 $Nom=filter_input(INPUT_POST, 'Nom');
 $Prenom=filter_input(INPUT_POST, 'Prenom');
 $mail=filter_input(INPUT_POST, 'mail');
 $Message=filter_input(INPUT_POST, 'Message');
-file_put_contents('contact_Y-m-d-H-i-s.txt', $raison, FILE_APPEND|LOCK_EX);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $civilite, FILE_APPEND|LOCK_EX);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $Nom, FILE_APPEND|LOCK_EX);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $Prenom, FILE_APPEND|LOCK_EX);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $mail, FILE_APPEND|LOCK_EX);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $Message, FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", $raison, FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", $civilite, FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", $Nom, FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", $Prenom, FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", $mail, FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", $Message, FILE_APPEND|LOCK_EX);
+
+
+
 ?>
 
     <main>
