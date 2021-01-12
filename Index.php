@@ -1,9 +1,6 @@
 <?php
 require './pages/header.php';
-$page=filter_input(INPUT_GET, 'page', FILTER_SANITIZE_URL | FILTER_SANITIZE_ENCODED) ;
-
-$nomclass="";
-$nomclassboolean=true;
+$page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_URL | FILTER_SANITIZE_ENCODED);
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 
