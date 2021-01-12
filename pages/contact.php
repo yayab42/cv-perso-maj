@@ -8,47 +8,50 @@ $metaTitle ="Page contact CV";
 
         <h2>Contact</h2>
 
-        <form id="formulaire" action="https://httpbin.org/post" method="POST">
+        <form id="formulaire" action="index.php?page=contact/post" method="POST">
 
             <section>
                 <p class="comment">Veuilllez préciser la raison de votre contact</p>
-                <input type="radio" value="Professionnel" id="Professionnel" name="Raison" required>
-                <label for="Professionnel">Professionnel</label>
+                <input type="radio" value="Proposition d'emploi" id="Proposition d'emploi" name="Raison">
+                <label for="Proposition d'emploi">Proposition d'emploi</label>
 
-                <input type="radio" value="Personnel" id="Personnel" name="Raison" required>
-                <label for="Personnel">Personnel</label>
+                <input type="radio" value="Demande d'informations" id="Demande d'informations" name="Raison" >
+                <label for="Demande d'informations">Demande d'informations</label>
+
+                <input type="radio" value="Prestation" id="Prestation" name="Raison">
+                <label for="Prestation">Prestation </label>
             </section>
 
             <section>
-                <p class="comment">Comment avez vous découvert mon site ?</p>
-                <label for="découverte"></label>
-                <select name="découverte" id="découverte" required>
+                <p class="comment">Civilité</p>
+                <label for="Civilité"></label>
+                <select name="Civilité" id="civilité" >
                     <option selected disabled></option>
-                    <option value="Recruteur">Recruteur</option>
-                    <option value="Bouche_a_oreille">Bouche à oreille</option>
-                    <option value="Autre">Autre</option>
+                    <option value="Monsieur">Monsieur</option>
+                    <option value="Madame">Madame</option>
+
                 </select>
             </section>
 
             <section>
                 <label for="Nom">Nom :</label>
-                <input type="text" id="Nom" name="Nom" placeholder="Saisissez Nom" required>
+                <input type="text" id="Nom" name="Nom" placeholder="Saisissez Nom">
             </section>
 
             <section>
                 <label for="Prénom">Prénom :</label>
-                <input type="text" id="Prénom" name="Prénom" placeholder="Saisissez Prénom" required>
+                <input type="text" id="Prénom" name="Prénom" placeholder="Saisissez Prénom" >
             </section>
 
             <section>
                 <label for="Mail">e-Mail :</label>
-                <input type="email" id="Mail" name="mail" placeholder="Saisissez e-mail" required>
+                <input type="email" id="Mail" name="mail" placeholder="Saisissez e-mail" >
             </section>
 
             <section>
                 <label for="message">Message :</label>
                 <textarea id="message" name="Message" placeholder="Entrez votre message ici" row="20" cols="20"
-                          required></textarea>
+                          ></textarea>
             </section>
 
             <section>
