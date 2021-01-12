@@ -64,7 +64,8 @@ if (!empty($submit)) {
     <form id="formulaire" method="POST"  action="index.php?page=contact">
 
         <section>
-            <p class="comment">Veuilllez préciser la raison de votre contact</p> <?php echo $errormsgraison ?>
+            <?php echo $errormsgraison ?><br>
+            <p class="comment">Veuilllez préciser la raison de votre contact</p>
             <input type="radio" value="Proposition d'emploi" id="Proposition d'emploi" name="Raison">
             <label for="Proposition d'emploi">Proposition d'emploi</label>
 
@@ -72,48 +73,49 @@ if (!empty($submit)) {
             <label for="Demande d'informations">Demande d'informations</label>
 
             <input type="radio" value="Prestation" id="Prestation" name="Raison">
-            <label for="Prestation">Prestation </label>
+            <label for="Prestation">Prestation </label><br>
         </section>
 
         <section>
-            <p class="comment">Civilité</p> <?php echo $errormsgcivilite ?>
+            <?php echo $errormsgcivilite ?><br>
+            <p class="comment">Civilité</p>
             <label for="civilité"></label>
             <select name="civilite" id="civilité">
                 <option selected disabled></option>
                 <option value="Monsieur">Monsieur</option>
                 <option value="Madame">Madame</option>
 
-            </select>
+            </select><br>
         </section>
 
         <section>
-            <?php echo $errormsgnom ?>
+            <?php echo $errormsgnom ?> <br><br>
             <label for="Nom">Nom :</label>
-            <input type="text" id="Nom" name="Nom" placeholder="Saisissez Nom">
+            <input type="text" id="Nom" name="Nom" placeholder="Saisissez Nom"><br>
         </section>
 
         <section>
-            <?php echo $errormsgprenom ?>
+            <?php echo $errormsgprenom ?> <br><br>
             <label for="Prenom">Prénom :</label>
-            <input type="text" id="Prénom" name="Prénom" placeholder="Saisissez Prénom">
+            <input type="text" id="Prénom" name="Prénom" placeholder="Saisissez Prénom"><br>
         </section>
 
         <section>
-            <?php echo $errormsgmail ?>
+            <?php echo $errormsgmail ?> <br><br>
             <label for="Mail">e-Mail :</label>
-            <input type="email" id="Mail" name="mail" placeholder="Saisissez e-mail">
+            <input type="email" id="Mail" name="mail" placeholder="Saisissez e-mail"><br>
         </section>
 
         <section>
-            <?php echo $errormsgmessage ?>
+            <?php echo $errormsgmessage ?> <br><br>
             <label for="message">Message :</label>
             <textarea id="message" name="Message" placeholder="Entrez votre message ici" row="20" cols="20"
-            ></textarea>
+            ></textarea><br>
         </section>
 
         <section>
             <input type="submit" name="submit" value="envoyer">
-        </section>
+        </section><br>
 
     </form>
 </main>
