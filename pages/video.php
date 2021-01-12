@@ -1,6 +1,6 @@
 <?php
 $page='video';
-$nomclassboolean=false;
+$nomclassboolean="";
 
 $metaTitle ="Vidéo présentation campus numérique";
 ?>

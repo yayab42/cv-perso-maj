@@ -1,9 +1,8 @@
 <?php
 $nomclass="";
-$nomclassboolean = true;
-if ($nomclassboolean === false) {
+if (isset($nomclassboolean)) {
     $nomclass = "active";
-} else if ($nomclassboolean === true) {
+} else{
     $nomclass = "boutonsnav";
 }
 ?>

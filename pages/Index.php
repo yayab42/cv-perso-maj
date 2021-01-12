@@ -1,6 +1,6 @@
 <?php
 $page="index";
-$nomclassboolean=false;
+$nomclassboolean="";
 $metaTitle ='index CV';
 ?>
     <span id="sidebar">
