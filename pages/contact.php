@@ -18,12 +18,12 @@ $_POST['Prenom']=filter_input(INPUT_POST, 'Prenom', $filter=FILTER_DEFAULT);
 $_POST['mail']=filter_input(INPUT_POST, 'mail',  $filter=FILTER_DEFAULT);
 
 $_POST['Message']=filter_input(INPUT_POST, 'Message', $filter=FILTER_DEFAULT);
-file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $Raison, int $flags=0);
-file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $civilite, int $flags=0);
-file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $Nom, int $flags=0);
-file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $Prenom, int $flags=0,);
-file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $mail, int $flags=0,);
-file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed Message, int $flags=0,);
+file_put_contents($contact_Y-m-d-H-i-s.txt, $P_POST['Raison'], $flags=0);
+file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['civilite'], $flags=0);
+file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['Nom'], $flags=0);
+file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['Prenom'], $flags=0,);
+file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['mail'],  $flags=0,);
+file_put_contents($contact_Y-m-d-H-i-s.txt, $_POST['Message'], $flags=0,);
 ?>
 
     <main>
