@@ -9,12 +9,12 @@ $Nom=filter_input(INPUT_POST, 'Nom');
 $Prenom=filter_input(INPUT_POST, 'Prenom');
 $mail=filter_input(INPUT_POST, 'mail');
 $Message=filter_input(INPUT_POST, 'Message');
-file_put_contents('contact_Y-m-d-H-i-s.txt', $raison);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $civilite);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $Nom);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $Prenom);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $mail);
-file_put_contents('contact_Y-m-d-H-i-s.txt', $Message);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $raison, FILE_APPEND|LOCK_EX);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $civilite, FILE_APPEND|LOCK_EX);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $Nom, FILE_APPEND|LOCK_EX);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $Prenom, FILE_APPEND|LOCK_EX);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $mail, FILE_APPEND|LOCK_EX);
+file_put_contents('contact_Y-m-d-H-i-s.txt', $Message, FILE_APPEND|LOCK_EX);
 ?>
 
     <main>
