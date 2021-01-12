@@ -9,12 +9,12 @@ $Nom=filter_input(INPUT_POST, 'Nom');
 $Prenom=filter_input(INPUT_POST, 'Prenom');
 $mail=filter_input(INPUT_POST, 'mail');
 $Message=filter_input(INPUT_POST, 'Message');
-file_put_contents("contact_$dateactuelle.txt", $raison, FILE_APPEND|LOCK_EX);
-file_put_contents("contact_$dateactuelle.txt", $civilite, FILE_APPEND|LOCK_EX);
-file_put_contents("contact_$dateactuelle.txt", $Nom, FILE_APPEND|LOCK_EX);
-file_put_contents("contact_$dateactuelle.txt", $Prenom, FILE_APPEND|LOCK_EX);
-file_put_contents("contact_$dateactuelle.txt", $mail, FILE_APPEND|LOCK_EX);
-file_put_contents("contact_$dateactuelle.txt", $Message, FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", "Raison du contact : $raison \n", FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", "Civilité : $civilite \n", FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", "Nom : $Nom\n", FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", "Prénom : $Prenom\n", FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", "Contact : $mail \n", FILE_APPEND|LOCK_EX);
+file_put_contents("contact_$dateactuelle.txt", "Corps du message : $Message\n", FILE_APPEND|LOCK_EX);
 
 
 
