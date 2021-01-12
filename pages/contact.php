@@ -4,6 +4,28 @@ $page='contact';
 <?php
 $metaTitle ="Page contact CV";
 ?>
+
+
+<?php
+$_POST['Raison']= filter_input(INPUT_POST, 'Raison', $filter=FILTER_DEFAULT);
+
+$_POST['civilite']=filter_input(INPUT_POST, 'civilite', $filter=FILTER_DEFAULT);
+
+$_POST['Nom']=filter_input(INPUT_POST, 'Nom', $filter=FILTER_DEFAULT);
+
+$_POST['Prenom']=filter_input(INPUT_POST, 'Prenom', $filter=FILTER_DEFAULT);
+
+$_POST['mail']=filter_input(INPUT_POST, 'mail',  $filter=FILTER_DEFAULT);
+
+$_POST['Message']=filter_input(INPUT_POST, 'Message', $filter=FILTER_DEFAULT);
+file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $Raison, int $flags=0);
+file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $civilite, int $flags=0);
+file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $Nom, int $flags=0);
+file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $Prenom, int $flags=0,);
+file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed $mail, int $flags=0,);
+file_put_contents(string $contact_Y-m-d-H-i-s.txt, mixed Message, int $flags=0,);
+?>
+
     <main>
 
         <h2>Contact</h2>
@@ -24,8 +46,8 @@ $metaTitle ="Page contact CV";
 
             <section>
                 <p class="comment">Civilité</p>
-                <label for="Civilité"></label>
-                <select name="Civilité" id="civilité" >
+                <label for="civilité"></label>
+                <select name="civilite" id="civilité" >
                     <option selected disabled></option>
                     <option value="Monsieur">Monsieur</option>
                     <option value="Madame">Madame</option>
@@ -39,7 +61,7 @@ $metaTitle ="Page contact CV";
             </section>
 
             <section>
-                <label for="Prénom">Prénom :</label>
+                <label for="Prenom">Prénom :</label>
                 <input type="text" id="Prénom" name="Prénom" placeholder="Saisissez Prénom" >
             </section>
 
