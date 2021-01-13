@@ -1,6 +1,6 @@
 <?php
 $page='hobby';
-$nomclassboolean="";
+$nomclassboolean=false;
 $metaTitle ="Hobby CV";
 ?>
     <main>

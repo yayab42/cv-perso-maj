@@ -1,11 +1,3 @@
-<?php
-$nomclass="";
-if (isset($nomclassboolean)) {
-    $nomclass = "active";
-} else{
-    $nomclass = "boutonsnav";
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
