@@ -12,23 +12,24 @@ if (!isset($_SESSION['dateFirstVisit'])) {
     $_SESSION['dateFirstVisit'] = $dateActuelle;
 }
 require 'pages/header.php';
+
+$routes=array(
+    "index"=>'pages/index.php',
+    "video"=>'pages/video.php',
+    "hobby"=>'pages/hobby.php',
+    "contact"=>'pages/hobby.php',
+    "404"=>'pages/404.php',
+);
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
-
-    if ($page == 'index') {
-        require './pages/index.php';
-    } elseif ($page == 'video') {
-        require './pages/video.php';
-    } elseif ($page == 'hobby') {
-        require './pages/hobby.php';
-    } elseif ($page == 'contact') {
-        require './pages/contact.php';
-    } else {
-        require './pages/404.php';
+    if (array_key_exists($page,$routes)){
+    require $routes[$page];
     }
-
 } else {
-    require './pages/index.php';
+    require $routes['index'];
+}
+if (!array_key_exists($page,$routes)){
+    require $routes['404'];
 }
 
 require './pages/footer.php';
