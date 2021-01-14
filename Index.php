@@ -17,7 +17,7 @@ $routes=array(
     "index"=>'pages/index.php',
     "video"=>'pages/video.php',
     "hobby"=>'pages/hobby.php',
-    "contact"=>'pages/hobby.php',
+    "contact"=>'pages/contact.php',
     "404"=>'pages/404.php',
 );
 if (isset($_GET['page'])) {
