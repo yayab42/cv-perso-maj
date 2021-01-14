@@ -3,11 +3,11 @@ $page = 'contact';
 $nomclassboolean=false;
 $metaTitle = "Page contact CV";
 
-$dateactuelle = date('Y-m-d-H-i-s');
+$dateActuelle = date('Y-m-d-H-i-s');
 $raison = filter_input(INPUT_POST, 'Raison');
 $civilite = filter_input(INPUT_POST, 'civilite');
 $Nom = filter_input(INPUT_POST, 'Nom');
-$Prenom = filter_input(INPUT_POST, 'Prenom');
+$prenom = filter_input(INPUT_POST, 'Prenom');
 $mail = filter_input(INPUT_POST, 'mail');
 $Message = filter_input(INPUT_POST, 'Message');
 $submit = filter_input(INPUT_POST, 'submit');
@@ -28,7 +28,7 @@ if (!empty($submit)) {
             $error=false;
             $errormsgnom= "Veuillez renseigner votre nom";
         }
-        if (empty($Prenom)) {
+        if (empty($prenom)) {
             $error=false;
             $errormsgprenom= "Veuillez renseigner votre prénom";
         }
@@ -45,17 +45,14 @@ if (!empty($submit)) {
             $errormsgmessage= "Veuillez renseigner le corps de message";
         }
         if($error==true) {
-            file_put_contents("contact_$dateactuelle.txt", "Raison du contact : $raison \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateactuelle.txt", "Civilité : $civilite \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateactuelle.txt", "Nom : $Nom\n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateactuelle.txt", "Prénom : $Prenom\n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateactuelle.txt", "Contact : $mail \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateactuelle.txt", "Corps du message : $Message\n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Raison du contact : $raison \n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Civilité : $civilite \n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Nom : $Nom\n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Prénom : $prenom\n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Contact : $mail \n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Corps du message : $Message\n", FILE_APPEND | LOCK_EX);
         }
-
 }
-
-
 ?>
 
 <main>
@@ -98,7 +95,7 @@ if (!empty($submit)) {
         <section>
             <?php echo $errormsgprenom ?> <br><br>
             <label for="Prenom">Prénom :</label>
-            <input type="text" id="Prénom" name="Prénom" placeholder="Saisissez Prénom"><br>
+            <input type="text" id="Prénom" name="Prenom" placeholder="Saisissez Prénom"><br>
         </section>
 
         <section>
