@@ -8,7 +8,7 @@ if (isset($_SESSION['countViewPage'])) {
 } else {
     $_SESSION['countViewPage']=0;
 }
-if ($_SESSION['countViewPage']==0) {
+if (!isset($_SESSION['dateFirstVisit'])) {
     $_SESSION['dateFirstVisit'] = $dateActuelle;
 }
 require 'pages/header.php';

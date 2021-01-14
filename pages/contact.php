@@ -6,43 +6,46 @@ $metaTitle = "Page contact CV";
 $dateActuelle = date('Y-m-d-H-i-s');
 $raison = filter_input(INPUT_POST, 'Raison');
 $civilite = filter_input(INPUT_POST, 'civilite');
-$Nom = filter_input(INPUT_POST, 'Nom');
+$nom = filter_input(INPUT_POST, 'Nom');
 $prenom = filter_input(INPUT_POST, 'Prenom');
 $mail = filter_input(INPUT_POST, 'mail',FILTER_VALIDATE_EMAIL);
 $message = filter_input(INPUT_POST, 'Message');
 $submit = filter_input(INPUT_POST, 'submit');
 $error=true;
-$errormsgraison="";
-$errormsgnom="";
-$errormsgprenom="";
-$errormsgcivilite="";
-$errormsgmail="";
-$errormsgmessage="";
+$formErrors=array(
+        "raison"=>"",
+        "nom"=>"",
+        "prenom"=> "",
+        "civilite"=>"",
+        "mail"=> "",
+        "message"=>"",
+);
+
 if (!empty($submit)) {
 
         if (empty($raison)) {
-            $errormsgraison="Veuillez renseigner la raison";
+            $formErrors['raison']="Veuillez renseigner la raison";
             $error=false;
         }
-        if (empty($Nom)) {
+        if (empty($nom)) {
             $error=false;
-            $errormsgnom= "Veuillez renseigner votre nom";
+            $formErrors['nom']="Veuillez renseigner votre nom";
         }
         if (empty($prenom)) {
             $error=false;
-            $errormsgprenom= "Veuillez renseigner votre prénom";
+            $formErrors['prenom']="Veuillez renseigner votre prénom";
         }
         if (empty($civilite)) {
             $error=false;
-            $errormsgcivilite= "Veuillez renseigner votre état civil";
+            $formErrors['civilite']="Veuillez renseigner votre état civil";
         }
         if (empty($mail)) {
             $error=false;
-            $errormsgmail= "Veuillez renseigner votre e-mail";
+            $formErrors['mail']="Veuillez renseigner votre mail";
         }
         if (empty($message)) {
             $error=false;
-            $errormsgmessage= "Veuillez renseigner le corps de message";
+            $formErrors['message']="Veuillez renseigner votre message";
         }
         if (strlen($message)<5){
         $error=false;
@@ -51,7 +54,7 @@ if (!empty($submit)) {
         if($error==true) {
             file_put_contents("contact_$dateActuelle.txt", "Raison du contact : $raison \n", FILE_APPEND | LOCK_EX);
             file_put_contents("contact_$dateActuelle.txt", "Civilité : $civilite \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateActuelle.txt", "Nom : $Nom\n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Nom : $nom\n", FILE_APPEND | LOCK_EX);
             file_put_contents("contact_$dateActuelle.txt", "Prénom : $prenom\n", FILE_APPEND | LOCK_EX);
             file_put_contents("contact_$dateActuelle.txt", "Contact : $mail \n", FILE_APPEND | LOCK_EX);
             file_put_contents("contact_$dateActuelle.txt", "Corps du message : $message\n", FILE_APPEND | LOCK_EX);
@@ -66,7 +69,8 @@ if (!empty($submit)) {
     <form id="formulaire" method="POST"  action="index.php?page=contact">
 
         <section>
-            <?php echo $errormsgraison ?><br>
+            <?php if(isset($formErrors['raison'])){
+            echo $formErrors['raison'];} ?><br>
             <p class="comment">Veuilllez préciser la raison de votre contact</p>
             <input type="radio" value="Proposition d'emploi" id="Proposition d'emploi" name="Raison">
             <label for="Proposition d'emploi">Proposition d'emploi</label>
@@ -79,7 +83,8 @@ if (!empty($submit)) {
         </section>
 
         <section>
-            <?php echo $errormsgcivilite ?><br>
+            <?php if(isset($formErrors['civilite'])){
+                echo $formErrors['civilite'];} ?><br>
             <p class="comment">Civilité</p>
             <label for="civilité"></label>
             <select name="civilite" id="civilité">
@@ -91,25 +96,29 @@ if (!empty($submit)) {
         </section>
 
         <section>
-            <?php echo $errormsgnom ?> <br><br>
+            <?php if(isset($formErrors['nom'])){
+                echo $formErrors['nom'];}?> <br><br>
             <label for="Nom">Nom :</label>
             <input type="text" id="Nom" name="Nom" placeholder="Saisissez Nom"><br>
         </section>
 
         <section>
-            <?php echo $errormsgprenom ?> <br><br>
+            <?php if(isset($formErrors['prenom'])){
+                echo $formErrors['prenom'];} ?> <br><br>
             <label for="Prenom">Prénom :</label>
             <input type="text" id="Prénom" name="Prenom" placeholder="Saisissez Prénom"><br>
         </section>
 
         <section>
-            <?php echo $errormsgmail ?> <br><br>
+            <?php if(isset($formErrors['mail'])){
+                echo $formErrors['mail'];} ?> <br><br>
             <label for="Mail">e-Mail :</label>
             <input type="email" id="Mail" name="mail" placeholder="Saisissez e-mail"><br>
         </section>
 
         <section>
-            <?php echo $errormsgmessage ?> <br><br>
+            <?php if(isset($formErrors['message'])){
+            echo $formErrors['message'];}?> <br><br>
             <label for="message">Message :</label>
             <textarea id="message" name="Message" placeholder="Entrez votre message ici" row="20" cols="20"
             ></textarea><br>
