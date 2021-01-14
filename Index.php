@@ -25,11 +25,12 @@ if (isset($_GET['page'])) {
     if (array_key_exists($page,$routes)){
     require $routes[$page];
     }
+    else{
+        require $routes['404'];
+    }
 } else {
     require $routes['index'];
 }
-if (!array_key_exists($page,$routes)){
-    require $routes['404'];
-}
+
 
 require './pages/footer.php';
