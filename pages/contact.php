@@ -8,8 +8,8 @@ $raison = filter_input(INPUT_POST, 'Raison');
 $civilite = filter_input(INPUT_POST, 'civilite');
 $Nom = filter_input(INPUT_POST, 'Nom');
 $prenom = filter_input(INPUT_POST, 'Prenom');
-$mail = filter_input(INPUT_POST, 'mail');
-$Message = filter_input(INPUT_POST, 'Message');
+$mail = filter_input(INPUT_POST, 'mail',FILTER_VALIDATE_EMAIL);
+$message = filter_input(INPUT_POST, 'Message');
 $submit = filter_input(INPUT_POST, 'submit');
 $error=true;
 $errormsgraison="";
@@ -40,9 +40,13 @@ if (!empty($submit)) {
             $error=false;
             $errormsgmail= "Veuillez renseigner votre e-mail";
         }
-        if (empty($Message)) {
+        if (empty($message)) {
             $error=false;
             $errormsgmessage= "Veuillez renseigner le corps de message";
+        }
+        if (strlen($message)<5){
+        $error=false;
+        $errormsgmessage="Votre message doit contenir au moins 5 caractères";
         }
         if($error==true) {
             file_put_contents("contact_$dateActuelle.txt", "Raison du contact : $raison \n", FILE_APPEND | LOCK_EX);
@@ -50,7 +54,7 @@ if (!empty($submit)) {
             file_put_contents("contact_$dateActuelle.txt", "Nom : $Nom\n", FILE_APPEND | LOCK_EX);
             file_put_contents("contact_$dateActuelle.txt", "Prénom : $prenom\n", FILE_APPEND | LOCK_EX);
             file_put_contents("contact_$dateActuelle.txt", "Contact : $mail \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateActuelle.txt", "Corps du message : $Message\n", FILE_APPEND | LOCK_EX);
+            file_put_contents("contact_$dateActuelle.txt", "Corps du message : $message\n", FILE_APPEND | LOCK_EX);
         }
 }
 ?>
