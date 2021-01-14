@@ -1,4 +1,13 @@
 <?php
+session_start();
+$id_session = session_id();
+$dateActuelle = date('Y-m-d-H-i-s');
+$_SESSION['count'] = 0;
+$countViewPage = $_SESSION['count'];
+if ($_SESSION['count']!=0) {
+    $_SESSION['count']++;
+    $dateFirstVisit = "$dateActuelle";
+}
 $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING);
 require './pages/header.php';
 if (isset($_GET['page'])) {
@@ -21,3 +30,4 @@ if (isset($_GET['page'])) {
 }
 
 require './pages/footer.php';
+session_destroy();
