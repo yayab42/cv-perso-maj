@@ -1,8 +1,7 @@
 <?php
 $page='video';
 $nomclassboolean=false;
-
-$metaTitle ="Vidéo présentation campus numérique";
+ob_start();
 ?>
 <div id="sidebar">
     <nav>
@@ -19,3 +18,6 @@ $metaTitle ="Vidéo présentation campus numérique";
 
     </Section>
 </main>
+<?php
+$buffer=ob_get_contents();
+?>

@@ -1,7 +1,7 @@
 <?php
 $page="hobby";
 $nomclassboolean=false;
-$metaTitle ="Hobby CV";
+ob_start();
 ?>
     <main>
         <div id="sidebar">
@@ -31,3 +31,6 @@ $metaTitle ="Hobby CV";
                     allowfullscreen></iframe>
         </div>
     </main>
+<?php
+$buffer=ob_get_contents();
+?>

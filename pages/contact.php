@@ -1,8 +1,6 @@
 <?php
 $page = 'contact';
 $nomclassboolean=false;
-$metaTitle = "Page contact CV";
-
 $formErrors=array(
     "Raison"=>"",
     "Nom"=>"",
@@ -69,6 +67,7 @@ if (!empty($formErrorsFilter['submit'])) {
               file_put_contents("contact_$dateActuelle.txt",$data);
         }
 }
+ob_start();
 ?>
 
 <main>
@@ -139,3 +138,6 @@ if (!empty($formErrorsFilter['submit'])) {
 
     </form>
 </main>
+<?php
+$buffer=ob_get_contents();
+?>

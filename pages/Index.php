@@ -1,7 +1,8 @@
 <?php
 $page="index";
 $nomclassboolean=false;
-$metaTitle ="index CV";
+$metaTitle="Accueil CV";
+ob_start();
 ?>
     <span id="sidebar">
       <nav>
@@ -125,3 +126,7 @@ $metaTitle ="index CV";
             </ol>
         </section>
     </main>
+
+<?php
+$buffer=ob_get_contents();
+?>
