@@ -3,61 +3,70 @@ $page = 'contact';
 $nomclassboolean=false;
 $metaTitle = "Page contact CV";
 
-$dateActuelle = date('Y-m-d-H-i-s');
-$raison = filter_input(INPUT_POST, 'Raison');
-$civilite = filter_input(INPUT_POST, 'civilite');
-$nom = filter_input(INPUT_POST, 'Nom');
-$prenom = filter_input(INPUT_POST, 'Prenom');
-$mail = filter_input(INPUT_POST, 'mail',FILTER_VALIDATE_EMAIL);
-$message = filter_input(INPUT_POST, 'Message');
-$submit = filter_input(INPUT_POST, 'submit');
-$error=true;
 $formErrors=array(
-        "raison"=>"",
-        "nom"=>"",
-        "prenom"=> "",
-        "civilite"=>"",
-        "mail"=> "",
-        "message"=>"",
+    "Raison"=>"",
+    "Nom"=>"",
+    "Prenom"=> "",
+    "civilite"=>"",
+    "mail"=> "",
+    "Message"=>"",
 );
 
-if (!empty($submit)) {
+$arguments=array(
+        'Raison'=>FILTER_SANITIZE_STRING,
+        'civilite'=>FILTER_SANITIZE_STRING,
+        'Nom'=>FILTER_SANITIZE_STRING,
+        'Prenom'=>FILTER_SANITIZE_STRING,
+        'mail'=>FILTER_VALIDATE_EMAIL,
+        'Message'=>FILTER_SANITIZE_STRING,
+        'submit'=>FILTER_SANITIZE_STRING
+);
+$formErrorsFilter=filter_input_array(INPUT_POST,$arguments);
 
-        if (empty($raison)) {
-            $formErrors['raison']="Veuillez renseigner la raison";
+
+$dateActuelle = date('Y-m-d-H-i-s');
+$data=[
+        "Raison du contact : " .  $formErrorsFilter['Raison'] . "\n",
+        "Civilite : " . $formErrorsFilter['civilite'] . "\n",
+        "Nom : " . $formErrorsFilter['Nom'] . "\n",
+        "Prenom : " . $formErrorsFilter['Prenom'] . "\n",
+        "Mail : " . $formErrorsFilter['mail'] . "\n",
+        "Message : " . $formErrorsFilter['Message'] . "\n",
+];
+
+$error=true;
+if (!empty($formErrorsFilter['submit'])) {
+
+        if (empty($formErrorsFilter['Raison'])) {
+            $formErrors['Raison']="Veuillez renseigner la raison";
             $error=false;
         }
-        if (empty($nom)) {
+        if (empty($formErrorsFilter['Nom'])) {
             $error=false;
-            $formErrors['nom']="Veuillez renseigner votre nom";
+            $formErrors['Nom']="Veuillez renseigner votre nom";
         }
-        if (empty($prenom)) {
+        if (empty($formErrorsFilter['Prenom'])) {
             $error=false;
-            $formErrors['prenom']="Veuillez renseigner votre prénom";
+            $formErrors['Prenom']="Veuillez renseigner votre prénom";
         }
-        if (empty($civilite)) {
+        if (empty($formErrorsFilter['civilite'])) {
             $error=false;
             $formErrors['civilite']="Veuillez renseigner votre état civil";
         }
-        if (empty($mail)) {
+        if (empty($formErrorsFilter['mail'])) {
             $error=false;
             $formErrors['mail']="Veuillez renseigner votre mail";
         }
-        if (empty($message)) {
+        if (empty($formErrorsFilter['Message'])) {
             $error=false;
-            $formErrors['message']="Veuillez renseigner votre message";
+            $formErrors['Message']="Veuillez renseigner votre message";
         }
-        if (strlen($message)<5){
+        if (strlen($formErrorsFilter['Message'])<5){
         $error=false;
         $errormsgmessage="Votre message doit contenir au moins 5 caractères";
         }
         if($error==true) {
-            file_put_contents("contact_$dateActuelle.txt", "Raison du contact : $raison \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateActuelle.txt", "Civilité : $civilite \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateActuelle.txt", "Nom : $nom\n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateActuelle.txt", "Prénom : $prenom\n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateActuelle.txt", "Contact : $mail \n", FILE_APPEND | LOCK_EX);
-            file_put_contents("contact_$dateActuelle.txt", "Corps du message : $message\n", FILE_APPEND | LOCK_EX);
+              file_put_contents("contact_$dateActuelle.txt",$data);
         }
 }
 ?>
@@ -113,7 +122,7 @@ if (!empty($submit)) {
             <?php if(isset($formErrors['mail'])){
                 echo $formErrors['mail'];} ?> <br><br>
             <label for="Mail">e-Mail :</label>
-            <input type="email" id="Mail" name="mail" placeholder="Saisissez e-mail"><br>
+            <input type="text" id="Mail" name="mail" placeholder="Saisissez e-mail"><br>
         </section>
 
         <section>
