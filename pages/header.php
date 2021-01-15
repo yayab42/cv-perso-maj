@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title><?= $metaTitle ?></title>
+    <title><?=$metaTitle?></title>
     <link rel="stylesheet" href="/pages/style.css"/>
 </head>
 <body>

@@ -1,5 +1,5 @@
 <?php
-$page='hobby';
+$page="hobby";
 $nomclassboolean=false;
 $metaTitle ="Hobby CV";
 ?>

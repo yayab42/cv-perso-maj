@@ -1,6 +1,6 @@
 <?php
-$page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING);
 session_start();
+$page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING);
 $id_session = session_id();
 $dateActuelle = date('Y-m-d-H-i-s');
 if (isset($_SESSION['countViewPage'])) {

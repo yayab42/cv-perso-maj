@@ -1,7 +1,7 @@
 <?php
 $page="index";
 $nomclassboolean=false;
-$metaTitle ='index CV';
+$metaTitle ="index CV";
 ?>
     <span id="sidebar">
       <nav>
