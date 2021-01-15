@@ -32,9 +32,8 @@ if (isset($page)) {
 } else {
     $route = $routes['index'];
 }
-ob_start();
+
 require 'pages/header.php';
 require $route;
 require 'pages/footer.php';
-$buffer=ob_get_contents();
-echo $buffer;
+
