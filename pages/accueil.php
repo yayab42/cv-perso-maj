@@ -1,5 +1,5 @@
 <?php
-$page="index";
+$page="accueil";
 $nomclassboolean=false;
 $metaTitle="Accueil CV";
 ob_start();

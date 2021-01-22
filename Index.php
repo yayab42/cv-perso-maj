@@ -11,7 +11,7 @@ if (!isset($_SESSION['dateFirstVisit'])) {
 
 
 $routes = array(
-    "index" => 'pages/index.php',
+    "accueil" => 'pages/accueil.php',
     "video" => 'pages/video.php',
     "hobby" => 'pages/hobby.php',
     "contact" => 'pages/contact.php',
@@ -30,7 +30,7 @@ if (isset($page)) {
         $route = $routes['404'];
     }
 } else {
-    $route = $routes['index'];
+    $route = $routes['accueil'];
 }
 
 require 'pages/header.php';
