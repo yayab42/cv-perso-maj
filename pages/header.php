@@ -28,7 +28,7 @@
     </div>
 
     <div class="boutonnav" id="navmain">
-        <a class="<?php if ($page=="index"){echo "active";} else{echo "boutonsnav";} ?>" href="./index.php?page=accueil">CV</a>
+        <a class="<?php if ($page=="accueil"){echo "active";} else{echo "boutonsnav";} ?>" href="./index.php?page=accueil">CV</a>
         <a class="<?php if ($page=="hobby"){echo "active";} else{echo "boutonsnav";} ?>" href="./index.php?page=hobby">Hobby</a>
         <a class="<?php if ($page=="video"){echo "active";} else{echo "boutonsnav";} ?>" href="./index.php?page=video">Vidéo</a>
         <a class="<?php if ($page=="contact"){echo "active";} else{echo "boutonsnav";} ?>" href="./index.php?page=contact">Contact</a>
