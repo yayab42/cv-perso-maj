@@ -30,7 +30,7 @@ if (isset($page)) {
         $route = $routes['404'];
     }
 } else {
-    $route = $routes['accueil'];
+    $route = $routes['index'];
 }
 
 require 'pages/header.php';
